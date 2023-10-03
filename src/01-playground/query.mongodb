@@ -1,0 +1,7 @@
+//Especificar la base de datos a la cual me voy a conectar
+use("sample_training")
+
+//Seleccionar la coleccion y el metodo de consulta
+db.zips.find({ state: "NY" })
+
+db.zips.find({ state: "NY" }).count() //Indica la cantidad de documentos que cumplen con la descripcion. 
