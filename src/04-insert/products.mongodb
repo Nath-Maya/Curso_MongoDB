@@ -4,13 +4,29 @@ db.product.drop() //Toma la coleccion y borra todos los documentos.
 
 db.product.insertMany([
    {
-    "name": "Producto 1",
-    "price": 19.99
+    _id: 1,
+    name: "Producto 1",
+    price: 19.99
   },
   {
-    "name": "Producto 2",
-    "price": 29.99
+    _id: 2,
+    name: "Producto 2",
+    price: 29.99
+  },
+    {
+    _id: 2,
+    name: "Producto 3",
+    price: 9.95
+  },
+    {
+   _id: 4,
+    name: "Producto 4",
+    price: 25.3
   }
-]) //Se deben introducir dentro de un array al ser varios documentos.
+],{
+   ordered: false
+}) 
+//Se deben introducir dentro de un array al ser varios documentos.
+
 
 db.product.find();
