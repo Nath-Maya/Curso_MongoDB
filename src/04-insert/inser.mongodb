@@ -1,0 +1,16 @@
+use("platzi_store");
+
+db.product.insertOne({
+   name: "Product 11",
+   price: 100
+}) //Insertar un documento
+
+//Playground
+/*
+{
+  "acknowledged": true,
+  "insertedId": {
+    "$oid": "6520a59d5387fe0c1ba10a9b"
+  }
+}
+*/
