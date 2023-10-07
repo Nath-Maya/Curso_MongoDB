@@ -1,0 +1,16 @@
+use("platzi_store");
+
+db.product.drop() //Toma la coleccion y borra todos los documentos. 
+
+db.product.insertMany([
+   {
+    "name": "Producto 1",
+    "price": 19.99
+  },
+  {
+    "name": "Producto 2",
+    "price": 29.99
+  }
+]) //Se deben introducir dentro de un array al ser varios documentos.
+
+db.product.find();
