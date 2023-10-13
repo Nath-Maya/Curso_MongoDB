@@ -9,7 +9,7 @@ db.zips.updateMany(
    //update - operators
    {
    $inc: { //incrementar con un valor
-      pop: 100
+      pop: 100 
    }
    }
 )
@@ -24,4 +24,29 @@ db.zips.updateMany(
   "upsertedCount": 0
 }
 */
+
+//! ---- $INC
+//Incrementar el valor de un atributo. 
+
+db.zips.updateMany(
+   //query
+   { city: "HUEYTOWN" },
+   //update - operators
+   {
+   $mul: { //multiplicar con un valor
+      pop: 3 //valor inicial 39677
+   }
+   }
+)
+
+/*
+{
+  "acknowledged": true,
+  "insertedId": null,
+  "matchedCount": 1,
+  "modifiedCount": 1,
+  "upsertedCount": 0
+}
+*/
+
 
