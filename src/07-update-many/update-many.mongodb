@@ -1,0 +1,27 @@
+use("sample_training")
+
+//! ---- $INC
+//Incrementar el valor de un atributo. 
+
+db.zips.updateMany(
+   //query
+   { city: "CLEVELAND" },
+   //update - operators
+   {
+   $inc: { //incrementar con un valor
+      pop: 100
+   }
+   }
+)
+
+//Playground result
+/*
+{
+  "acknowledged": true,
+  "insertedId": null,
+  "matchedCount": 34,
+  "modifiedCount": 34,
+  "upsertedCount": 0
+}
+*/
+
