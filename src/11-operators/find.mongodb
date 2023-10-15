@@ -1,0 +1,21 @@
+use("platzi_store")
+
+//Operator mayor que
+db.inventory.find(
+   { qty: { $gt: 20}}
+)
+
+
+//Operator menor  que
+db.inventory.find(
+   { qty: { $lt: 20}}
+)
+
+use("platzi_store")
+//Usar dos operators.
+db.inventory.find(
+   { qty: 
+      { $lt: 25, $gt: 10}
+   }
+
+)
