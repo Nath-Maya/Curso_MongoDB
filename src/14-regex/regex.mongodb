@@ -1,0 +1,16 @@
+//! REGEX 
+
+//Se realizan busquedas especificas  que cumplan con un patron regular
+use("platzi_store")
+db.inventory.find({ "item.description": { $regex: /line/}})
+
+
+//Para indicarle a mongo que busque sin importar mayusculas y minusculas se coloca la i al final. 
+use("platzi_store")
+db.inventory.find({ "item.description": { $regex: /SINGLE/i}})
+
+
+//Texto que termine en line
+use("platzi_store")
+db.inventory.find({ "item.description": { $regex: /line$/}})
+
