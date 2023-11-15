@@ -1,0 +1,39 @@
+use("sample_training")
+
+
+//? AND implicit
+
+db.inspections.find(
+   { sector: "Tax Preparers - 891",
+     result: "Unable to Locate"
+   }
+).count()
+
+//? AND explicit
+//Cumplan las dos condiciones.
+
+db.inspections.find({
+   $and: [
+    { sector: "Tax PReparers - 891"},
+    { result: "Unable to Locate"}
+   ]
+}).count()
+
+//? OR
+//Cumplan al menos una condicion
+
+db.inspections.find({
+   $or: [
+    { sector: "Tax PReparers - 891"},
+    { result: "Unable to Locate"}
+   ]
+}).count()
+
+
+
+
+
+// $and => que cumpla las dos o más condiciones dadas.
+// $or => los que cumplan al menos una condición.
+// $nor => los que no cumplan con ninguna condición.
+// $not => excluye un elemento en especifico y no tiene forma de array
