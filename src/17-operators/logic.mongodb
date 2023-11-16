@@ -17,7 +17,7 @@ db.inspections.find({
     { sector: "Tax PReparers - 891"},
     { result: "Unable to Locate"}
    ]
-}).count()
+}).count()  
 
 //? OR
 //Cumplan al menos una condicion
