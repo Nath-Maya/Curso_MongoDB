@@ -1,0 +1,52 @@
+use("sample_airbnb")
+
+db.listingsAndReviews.aggregate([
+  { $match: { amenities: "Wifi"} }, // find
+  {
+    $group: {
+      _id: "$address.country",
+      count: { $sum: 1 }
+    }
+  }
+])
+
+//La salida de un pipeline es la entrada del otro
+
+// [
+//   {
+//     "_id": "Turkey",
+//     "count": 616
+//   },
+//   {
+//     "_id": "Spain",
+//     "count": 619
+//   },
+//   {
+//     "_id": "United States",
+//     "count": 1200
+//   },
+//   {
+//     "_id": "Brazil",
+//     "count": 541
+//   },
+//   {
+//     "_id": "Hong Kong",
+//     "count": 559
+//   },
+//   {
+//     "_id": "Australia",
+//     "count": 579
+//   },
+//   {
+//     "_id": "China",
+//     "count": 18
+//   },
+//   {
+//     "_id": "Canada",
+//     "count": 634
+//   },
+//   {
+//     "_id": "Portugal",
+//     "count": 537
+//   }
+// ]

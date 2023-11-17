@@ -1,0 +1,10 @@
+use("sample_training")
+
+db.companies.find({
+//caracteristica . el segundo elemento . el primer nombre
+  "relationships.person.first_name": "Mark"
+}, {
+//projection
+  name: 1,
+  relationships: 1,
+}).count() 
