@@ -1,16 +1,14 @@
-# Curso Fundamentos de MongoDB
 
-![Mongo](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) 
-
-
- 
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/Nath-Maya/Curso_MongoDB)
+# Curso Fundamentos de MongoDB ![Mongo](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/Nath-Maya/Curso_MongoDB)
 
 
-* ## Introducción a MongoDB
+
+* ### 🧾 Introducción a MongoDB
+
 
 MongoDB es un sistema de gestión de bases de datos (DBMS) NoSQL, orientado a documentos y de código abierto
 
+* ### 📝 Temas
 
 * Instalación y Configuración
 
